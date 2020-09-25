@@ -31,13 +31,15 @@ function myFunction() {
     console.log(document.body.scrollTop);
     console.log(document.documentElement.scrollTop);
     
-    if (document.documentElement.scrollTop > theHeight3) {
+    if (document.documentElement.scrollTop >= theHeight3) {
         document.querySelectorAll('li')[2].style.color = 'red';
-    } else if (document.documentElement.scrollTop > theHeight2 && document.body.scrollTop < theHeight3) {
+
+    } else if (document.documentElement.scrollTop >= theHeight2) {
     document.querySelectorAll('li')[1].style.color = 'blue';
 
-    } else if (document.documentElement.scrollTop > theHeight) {
+    } else if (document.documentElement.scrollTop >= theHeight) {
     document.querySelectorAll('li')[0].style.color = 'orange';
+
     } 
 }
 
